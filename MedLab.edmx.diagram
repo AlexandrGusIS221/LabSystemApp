@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a1d2d8bb3e8e4908a5aa8883f9202081" Name="Diagram1">
+        <EntityTypeShape EntityType="MedLabDBModel.AccountantReport" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.Analyzer" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.AnalyzerWork" Width="1.5" PointX="8.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.InsuranceCompany" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.Order" Width="1.5" PointX="11.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.OrderService" Width="1.5" PointX="13.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.PolicyType" Width="1.5" PointX="3.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.Role" Width="1.5" PointX="3.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.Service" Width="1.5" PointX="11.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.SessionHistory" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.Status" Width="1.5" PointX="9" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MedLabDBModel.User" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="MedLabDBModel.FK__accountan__insur__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_accountantReports_users" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_analyzerWork__analyzer_" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_services_analyzers" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_analyzerWork_users" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_analyzerWorks_orderServices" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_users_insuranceCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_Orders_Statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_orders_users" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_orderServices_orders" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_orderServices_orderServiceStatuses" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_orderServices_services" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_users_policyTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_users_roles" ManuallyRouted="false" />
+        <AssociationConnector Association="MedLabDBModel.FK_sessionHistory_users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

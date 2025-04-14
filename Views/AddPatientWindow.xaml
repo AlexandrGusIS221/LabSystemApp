@@ -1,0 +1,83 @@
+﻿<Window x:Class="LabSystemApp.Views.AddPatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        Icon="/Assets/labapp.png"
+        Title="Регистрация пациента" Height="575" Width="350"
+        Background="#1A2223">
+    <!-- Slightly darker background -->
+    <Grid Background="#1A2223">
+        <!-- Matching grid background -->
+        <ScrollViewer Background="#1A2223">
+            <!-- Matching scroll background -->
+            <StackPanel Margin="22" Background="#2A3537">
+                <!-- Slightly different gray -->
+                <!-- Блок для выбора изображения -->
+                <TextBlock Text="Изображение профиля:" Margin="0,0,0,6" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <StackPanel Orientation="Horizontal" Background="#2A3537">
+                    <Image x:Name="PatientImagePreview" Width="78" Height="78" Margin="0,0,12,0"
+                           Source="/Assets/default.gif" Stretch="UniformToFill"/>
+                    <Button Content="Загрузить фото" Click="SelectImage_Click" Padding="12,6" Height="32"
+                            Background="#4B7BB0" Foreground="#F0F0F0" BorderBrush="#F0F0F0"/>
+                    <!-- Slightly different blue, off-white text -->
+                </StackPanel>
+                <TextBlock x:Name="SelectedImageText" FontSize="11" Foreground="#F0F0F0" Margin="0,0,0,12"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Полное имя:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegFullName" MaxLength="100" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Логин:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegLogin" MaxLength="50" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Пароль:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegPassword" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Электронная почта:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegMail" MaxLength="100" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Дата рождения:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <DatePicker x:Name="RegBirthDate" DisplayDateStart="1900-01-01" DisplayDateEnd="{x:Static system:DateTime.Now}"
+                            Background="#355070" Foreground="#000000" BorderBrush="#4B7BB0"/>
+                <!-- Black text (unchanged) -->
+
+                <TextBlock Text="Серия паспорта:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegPassportSeries" MaxLength="4" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Номер паспорта:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegPassportNumber" MaxLength="6" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Номер телефона:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegPhone" MaxLength="20" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock Text="Номер полиса:" Foreground="#F0F0F0"/>
+                <!-- Off-white text -->
+                <TextBox x:Name="RegPolicyNumber" MaxLength="16" Background="#355070" Foreground="#F0F0F0" BorderBrush="#4B7BB0"/>
+                <!-- Off-white text -->
+
+                <TextBlock x:Name="RegError" Foreground="#FF4040" Margin="0,6"/>
+                <!-- Slightly brighter red for error -->
+
+                <Button Content="Зарегистрировать пациента" Click="Register_Click" Margin="0,22,0,0"
+                        Background="#4B7BB0" Foreground="#F0F0F0" BorderBrush="#F0F0F0"/>
+                <!-- Slightly different blue, off-white text -->
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

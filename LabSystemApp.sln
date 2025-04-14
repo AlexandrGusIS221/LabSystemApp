@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabSystemApp", "LabSystemApp.csproj", "{FF81DC01-524E-497D-B50F-62C8D6486211}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MAIL_LIB", "..\MAIL_LIB\MAIL_LIB.csproj", "{F8108383-557F-49E9-89F3-4D8D56141A45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF81DC01-524E-497D-B50F-62C8D6486211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF81DC01-524E-497D-B50F-62C8D6486211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF81DC01-524E-497D-B50F-62C8D6486211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF81DC01-524E-497D-B50F-62C8D6486211}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8108383-557F-49E9-89F3-4D8D56141A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8108383-557F-49E9-89F3-4D8D56141A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8108383-557F-49E9-89F3-4D8D56141A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8108383-557F-49E9-89F3-4D8D56141A45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B68A32F-4E4C-4D18-AB7F-6AB9886890A2}
+	EndGlobalSection
+EndGlobal

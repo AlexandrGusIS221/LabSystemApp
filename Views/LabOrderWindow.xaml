@@ -1,0 +1,106 @@
+﻿<Window x:Class="LabSystemApp.Views.LabOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/Assets/labapp.png"
+        Title="Приём биоматериала и формирование заказа"
+        Height="570" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closed"
+        Background="#1C2526">
+    <!-- Black background for window -->
+    <Grid Background="#1C2526">
+        <!-- Black background for grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Верхняя панель -->
+        <DockPanel Grid.Row="0" Height="60" Background="#394867" LastChildFill="False">
+            <!-- Dark blue header -->
+            <Image x:Name="ProfileImage" Width="50" Height="50" Margin="10" Source="{Binding UserImage}"/>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Background="#394867">
+                <!-- Dark blue -->
+                <TextBlock x:Name="FullNameText" Foreground="#FFFFFF" FontWeight="Bold" FontSize="14"/>
+                <!-- White text -->
+                <TextBlock x:Name="RoleText" Foreground="#FFFFFF" FontSize="12"/>
+                <!-- White text -->
+            </StackPanel>
+            <Button Content="Выход" DockPanel.Dock="Right" Margin="10" Padding="10,5" Click="BackToMain_Click"
+                    Background="#4A6FA5" Foreground="#FFFFFF" BorderBrush="#FFFFFF"/>
+            <!-- Blue button, white text -->
+        </DockPanel>
+
+        <!-- Основное содержимое -->
+        <Grid Grid.Row="1" Margin="10" Background="#1C2526">
+            <!-- Black -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Background="#1C2526">
+                <!-- Black -->
+                <StackPanel Background="#2D383A">
+                    <!-- Dark gray panel -->
+
+                    <!-- Пациент -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Background="#2D383A">
+                        <!-- Dark gray -->
+                        <Label Content="Пациент:" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                        <!-- White text -->
+                        <ComboBox x:Name="PatientCombo" Width="300"
+                                  DisplayMemberPath="FullName" SelectedValuePath="UserID"
+                                  Background="#394867" Foreground="#000000" BorderBrush="#4A6FA5"/>
+                        <!-- Dark blue, black text -->
+                        <Button Content="+" Click="AddNewPatient_Click" Width="30" Margin="5,0"
+                                Background="#4A6FA5" Foreground="#FFFFFF" BorderBrush="#FFFFFF"/>
+                        <!-- Blue button, white text -->
+                    </StackPanel>
+
+                    <!-- Услуги -->
+                    <TextBlock Text="Выберите услуги:" FontWeight="Bold" Margin="0,10,0,5" Foreground="#FFFFFF"/>
+                    <!-- White text -->
+                    <ListBox x:Name="ServicesListBox" Height="200" SelectionMode="Extended"
+                             DisplayMemberPath="Nme" 
+                             Background="#1C2526" Foreground="#FFFFFF" BorderBrush="#4A6FA5"/>
+                    <!-- Black, white text -->
+
+                    <!-- Стоимость -->
+                    <StackPanel Orientation="Horizontal" Margin="0,10" Background="#2D383A">
+                        <!-- Dark gray -->
+                        <TextBlock Text="Общая стоимость:" FontWeight="Bold" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                        <!-- White text -->
+                        <TextBlock x:Name="TotalPriceText" FontWeight="Bold" Foreground="#FFFFFF" Margin="10,0"/>
+                        <!-- White text -->
+                    </StackPanel>
+
+                    <!-- Код пробирки -->
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Background="#2D383A">
+                        <!-- Dark gray -->
+                        <Label Content="Код пробирки:" VerticalAlignment="Center" Foreground="#FFFFFF"/>
+                        <!-- White text -->
+                        <TextBox x:Name="BiomaterialCodeInput" Width="150"
+                                 Background="#394867" Foreground="#FFFFFF" BorderBrush="#4A6FA5"/>
+                        <!-- Dark blue, white text -->
+                    </StackPanel>
+
+                    <!-- Таймер и кнопки -->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10" Background="#2D383A">
+                        <!-- Dark gray -->
+                        <TextBlock Text="Осталось времени:" FontWeight="Bold" Foreground="#FFFFFF" VerticalAlignment="Center"/>
+                        <!-- White text -->
+                        <TextBlock x:Name="TimerTextBlock" Text="02:30:00" FontWeight="Bold" Foreground="#EF4444" Margin="5,2,10,0" VerticalAlignment="Center"/>
+                        <!-- Red text unchanged -->
+                        <Button Content="Сохранить заказ" Click="SubmitOrder_Click" Width="150" Margin="0,0,10,0"
+                                Background="#4A6FA5" Foreground="#FFFFFF" BorderBrush="#FFFFFF"/>
+                        <!-- Blue button, white text -->
+                        <Button Content="Отмена" Click="BackToMain_Click" Width="100"
+                                Background="#4A6FA5" Foreground="#FFFFFF" BorderBrush="#FFFFFF"/>
+                        <!-- Blue button, white text -->
+                    </StackPanel>
+
+                    <!-- Ошибка -->
+                    <TextBlock x:Name="ErrorTextBlock" Foreground="Red" FontWeight="Bold" Margin="0,10,0,0"/>
+                    <!-- Red text unchanged -->
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>
